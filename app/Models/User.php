@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\UserRole;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
@@ -14,6 +15,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'organization',
+        'avatar_path',
+        'logo_path',
         'password',
         'role',
     ];
@@ -37,6 +42,11 @@ class User extends Authenticatable
         return $this->role === UserRole::ADMIN;
     }
 
+    public function isEditeur(): bool
+    {
+        return $this->role === UserRole::EDITEUR;
+    }
+
     public function isInvestisseur(): bool
     {
         return $this->role === UserRole::INVESTISSEUR;
@@ -45,5 +55,10 @@ class User extends Authenticatable
     public function isIndustriel(): bool
     {
         return $this->role === UserRole::INDUSTRIEL;
+    }
+
+    public function clientProjects(): HasMany
+    {
+        return $this->hasMany(ClientProject::class, 'client_id');
     }
 }

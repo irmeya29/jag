@@ -11,31 +11,40 @@
             Des projets présentés avec clarté, sobriété et crédibilité
         </h1>
         <p class="mt-6 max-w-3xl text-base leading-8 text-slate-200">
-            Le portfolio met en avant les projets, les localisations, les superficies, les types de prestation
-            et l’état d’avancement, avec une lecture simple pour les visiteurs.
+            Just Agro Group structure des projets agricoles et des approvisionnements contractuels avec une logique d’exécution, de traçabilité et de documentation.
+            Cette page présente quelques exemples de dossiers, études, accompagnements et cadres contractuels développés par l’équipe.
         </p>
     </div>
 </section>
 
 <section class="bg-jagMuted py-20 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="rounded-[2rem] bg-white p-8 shadow-soft">
-                <div class="font-heading text-4xl font-extrabold text-jagGreen">8 ha</div>
-                <p class="mt-3 text-sm text-jagText">Encadrés</p>
-            </div>
-            <div class="rounded-[2rem] bg-white p-8 shadow-soft">
-                <div class="font-heading text-4xl font-extrabold text-jagBlue">4</div>
-                <p class="mt-3 text-sm text-jagText">Projets actifs</p>
-            </div>
-            <div class="rounded-[2rem] bg-white p-8 shadow-soft">
-                <div class="font-heading text-4xl font-extrabold text-jagOrange">100%</div>
-                <p class="mt-3 text-sm text-jagText">Satisfaction client</p>
-            </div>
-            <div class="rounded-[2rem] bg-white p-8 shadow-soft">
-                <div class="font-heading text-4xl font-extrabold text-jagNavy">2 pôles</div>
-                <p class="mt-3 text-sm text-jagText">Lecture distincte</p>
-            </div>
+        <div class="grid gap-8 lg:grid-cols-2">
+            <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+                <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-jagGreen/10 text-jagGreen">
+                    <x-icon name="leaf" class="h-7 w-7" />
+                </div>
+                <p class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagGreen">Réalisations — Investisseurs privés / Pôle 1</p>
+                <h2 class="mt-4 font-heading text-3xl font-extrabold text-jagNavy">Maîtrise d’Ouvrage Agricole</h2>
+                <ul class="mt-6 space-y-3 text-sm leading-7 text-jagText">
+                    @foreach (['Plans d’exploitation', 'Diagnostics agronomiques', 'Projets de mise en valeur', 'Suivis de campagne', 'Dispositifs de reporting', 'Cadres contractuels'] as $item)
+                        <li>• {{ $item }}</li>
+                    @endforeach
+                </ul>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+                <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-jagBlue/10 text-jagBlue">
+                    <x-icon name="factory" class="h-7 w-7" />
+                </div>
+                <p class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagBlue">Réalisations — Industriels / Pôle 2</p>
+                <h2 class="mt-4 font-heading text-3xl font-extrabold text-jagNavy">Approvisionnement contractuel</h2>
+                <ul class="mt-6 space-y-3 text-sm leading-7 text-jagText">
+                    @foreach (['Demandes ou cadrages Lettre d’intention (LOI)', 'Propositions d’approvisionnement', 'Schémas de production contractuelle', 'Documents de livraison', 'Cadres qualité / traçabilité', 'Études de sécurisation d’approvisionnement'] as $item)
+                        <li>• {{ $item }}</li>
+                    @endforeach
+                </ul>
+            </article>
         </div>
     </div>
 </section>
@@ -66,6 +75,9 @@
                     </div>
 
                     <div class="p-6">
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl {{ $project->pole === 'pole_1' ? 'bg-jagGreen/10 text-jagGreen' : 'bg-jagBlue/10 text-jagBlue' }}">
+                            <x-icon :name="$project->pole === 'pole_1' ? 'leaf' : 'factory'" class="h-6 w-6" />
+                        </div>
                         <div class="flex items-center justify-between gap-4">
                             <span class="rounded-full bg-jagMuted px-3 py-2 text-[11px] font-heading font-bold uppercase tracking-[0.16em] text-jagNavy">
                                 {{ $project->pole === 'pole_1' ? 'Pôle 1' : 'Pôle 2' }}

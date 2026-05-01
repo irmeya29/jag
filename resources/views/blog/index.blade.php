@@ -17,6 +17,22 @@
     </div>
 </section>
 
+<section class="bg-jagMuted py-14">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        @php($categoryIcons = ['leaf', 'chart', 'document', 'target'])
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            @foreach (['Vie des projets', 'Notes d’analyse', 'Actualités JAG', 'Conseils pratiques'] as $rubrique)
+                <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+                    <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-jagGreen/10 text-jagGreen">
+                        <x-icon :name="$categoryIcons[$loop->index]" class="h-6 w-6" />
+                    </div>
+                    <h2 class="font-heading text-xl font-bold text-jagNavy">{{ $rubrique }}</h2>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 <section class="bg-white py-20 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">

@@ -4,6 +4,15 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
+        @isset($gateway)
+            <input type="hidden" name="gateway" value="{{ $gateway }}">
+        @endisset
+
+        @isset($gateway)
+            <div class="mb-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                Accès réservé aux administrateurs et éditeurs Just Agro Group.
+            </div>
+        @endisset
 
         <!-- Email Address -->
         <div>

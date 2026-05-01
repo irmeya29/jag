@@ -87,19 +87,7 @@
                                         Approvisionnement structuré
                                     </h3>
                                 </div>
-
-                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                                    <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                        <path d="M4 21h16" stroke-linecap="round"/>
-                                        <path d="M6 21V8l6-3 6 3v13" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9 12h.01M9 15h.01M12 12h.01M12 15h.01M15 12h.01M15 15h.01" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
                             </div>
-
-                            <p class="mt-4 text-sm leading-7 text-white/80">
-                                LOI, volumes, livraisons et visibilité plus nette.
-                            </p>
                         </article>
 
                         <article class="rounded-[2rem] border border-white/10 bg-jagOrange p-6 text-white shadow-soft">
@@ -109,9 +97,6 @@
                             <h3 class="mt-3 font-heading text-xl font-extrabold">
                                 Suivi digital plus lisible
                             </h3>
-                            <p class="mt-4 text-sm leading-7 text-white/85">
-                                Rapports, documents et informations clés dans un seul espace.
-                            </p>
                         </article>
                     </div>
                 </div>
@@ -131,45 +116,24 @@
 
         <div class="mt-12 grid gap-6 lg:grid-cols-3">
             <article class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
-                <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-jagMuted">
-                    <svg class="h-8 w-8 text-jagGreen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="m9.5 12 1.7 1.7L14.8 10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-jagGreen/10 text-jagGreen">
+                    <x-icon name="shield" class="h-7 w-7" />
                 </div>
                 <h3 class="mt-6 font-heading text-2xl font-bold text-jagNavy">Sécurisation</h3>
-                <p class="mt-4 text-sm leading-7 text-jagText">
-                    Produire dans un cadre plus lisible et mieux maîtrisé.
-                </p>
             </article>
 
             <article class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
-                <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-jagMuted">
-                    <svg class="h-8 w-8 text-jagBlue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path d="M4 20h16" stroke-linecap="round"/>
-                        <path d="M6 20V10l6-4 6 4v10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 14h.01M12 14h.01M15 14h.01" stroke-linecap="round"/>
-                    </svg>
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-jagBlue/10 text-jagBlue">
+                    <x-icon name="factory" class="h-7 w-7" />
                 </div>
                 <h3 class="mt-6 font-heading text-2xl font-bold text-jagNavy">Industrialisation</h3>
-                <p class="mt-4 text-sm leading-7 text-jagText">
-                    Une exécution suivie avec une logique de performance.
-                </p>
             </article>
 
             <article class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
-                <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-jagMuted">
-                    <svg class="h-8 w-8 text-jagOrange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path d="M4 19h16" stroke-linecap="round"/>
-                        <path d="M7 16V9" stroke-linecap="round"/>
-                        <path d="M12 16V5" stroke-linecap="round"/>
-                        <path d="M17 16v-3" stroke-linecap="round"/>
-                    </svg>
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-jagOrange/10 text-jagOrange">
+                    <x-icon name="chart" class="h-7 w-7" />
                 </div>
                 <h3 class="mt-6 font-heading text-2xl font-bold text-jagNavy">Transparence digitale</h3>
-                <p class="mt-4 text-sm leading-7 text-jagText">
-                    Une lecture plus claire des rapports, documents et états.
-                </p>
             </article>
         </div>
     </div>
@@ -200,8 +164,11 @@
                     >
                 </div>
                 <div class="p-8">
+                    <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-jagGreen/10 text-jagGreen">
+                        <x-icon name="leaf" class="h-7 w-7" />
+                    </div>
                     <span class="text-[11px] font-heading font-bold uppercase tracking-[0.18em] text-jagGreen">
-                        Pôle 1 — MOA
+                        Pôle 1 — Maîtrise d’Ouvrage Agricole
                     </span>
                     <h3 class="mt-4 font-heading text-3xl font-extrabold text-jagNavy">
                         Investisseurs et propriétaires de terrain
@@ -227,6 +194,9 @@
                     >
                 </div>
                 <div class="p-8">
+                    <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-jagBlue/10 text-jagBlue">
+                        <x-icon name="factory" class="h-7 w-7" />
+                    </div>
                     <span class="text-[11px] font-heading font-bold uppercase tracking-[0.18em] text-jagBlue">
                         Pôle 2 — Industriel
                     </span>
@@ -234,7 +204,7 @@
                         Industries et transformateurs
                     </h3>
                     <ul class="mt-6 space-y-3 text-sm leading-7 text-jagText">
-                        <li>• Production adossée à une LOI</li>
+                        <li>• Production adossée à une Lettre d’intention (LOI)</li>
                         <li>• Contrats fermes sur 3 ans</li>
                         <li>• Volumes et livraisons suivis</li>
                     </ul>
@@ -248,42 +218,15 @@
     </div>
 </section>
 
-<section class="bg-jagNavy py-20 text-white sm:py-24">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl">
-            <p class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagOrange">Repères</p>
-            <h2 class="mt-3 font-heading text-3xl font-extrabold sm:text-4xl">
-                Quelques indicateurs
-            </h2>
-        </div>
-
-        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-                <div class="font-heading text-4xl font-extrabold text-white">8 ha</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Sous gestion</p>
-            </div>
-            <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-                <div class="font-heading text-4xl font-extrabold text-white">4</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Projets actifs</p>
-            </div>
-            <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-                <div class="font-heading text-4xl font-extrabold text-white">100%</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Satisfaction</p>
-            </div>
-            <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-                <div class="font-heading text-4xl font-extrabold text-white">50 ha</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Objectif 2026</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="bg-white py-20 sm:py-24">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
         <div class="rounded-[2rem] bg-jagMuted p-8 shadow-soft">
             <div class="rounded-[1.75rem] bg-jagNavy p-8 text-white">
                 <div class="flex items-start justify-between gap-4">
                     <div>
+                        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white">
+                            <x-icon name="document" class="h-7 w-7" />
+                        </div>
                         <div class="text-[11px] font-heading font-bold uppercase tracking-[0.18em] text-white/70">
                             Mon Espace Just
                         </div>
@@ -292,14 +235,6 @@
                         </h3>
                     </div>
 
-                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
-                        <svg class="h-7 w-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                            <path d="M4 19h16" stroke-linecap="round"/>
-                            <path d="M7 16V9" stroke-linecap="round"/>
-                            <path d="M12 16V5" stroke-linecap="round"/>
-                            <path d="M17 16v-3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
                 </div>
 
                 <div class="mt-8 grid gap-4 sm:grid-cols-2">
@@ -338,6 +273,7 @@
                 <li>• Vue adaptée au profil</li>
                 <li>• Documents centralisés</li>
                 <li>• Meilleure lisibilité</li>
+                <li>• Just Control Live en option</li>
             </ul>
 
             <a href="{{ route('mon-espace-just') }}"
@@ -350,7 +286,6 @@
 
 <section class="bg-jagMuted py-20 sm:py-24">
     <div class="mx-auto max-w-5xl px-6 text-center lg:px-8">
-        <p class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagGreen">Passage à l’action</p>
         <h2 class="mt-4 font-heading text-3xl font-extrabold text-jagNavy sm:text-4xl">
             Parlons de votre besoin
         </h2>
@@ -361,12 +296,12 @@
         <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a href="{{ route('contact.create', ['profile' => 'investisseur']) }}"
                class="inline-flex items-center justify-center rounded-full bg-jagGreen px-6 py-4 text-xs font-heading font-bold uppercase tracking-[0.18em] text-white">
-                Investisseur — Pôle 1
+                Je suis un investisseur privé
             </a>
 
             <a href="{{ route('contact.create', ['profile' => 'industriel']) }}"
                class="inline-flex items-center justify-center rounded-full bg-jagBlue px-6 py-4 text-xs font-heading font-bold uppercase tracking-[0.18em] text-white">
-                Industriel — Pôle 2
+                Je suis un industriel ou transformateur
             </a>
         </div>
     </div>

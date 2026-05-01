@@ -152,17 +152,33 @@
         </div>
 
         <aside class="space-y-6">
+            <div class="rounded-[2rem] bg-jagNavy p-8 text-white shadow-soft">
+                <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white">
+                    <x-icon name="target" class="h-7 w-7" />
+                </div>
+                <div class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagOrange">Promesse de retour</div>
+                <p class="mt-5 text-sm leading-7 text-slate-200">
+                    Nous revenons vers vous après analyse initiale de votre besoin pour cadrer la prochaine étape utile : échange, visite, étude ou proposition.
+                </p>
+            </div>
+
             <div class="rounded-[2rem] bg-jagMuted p-8 shadow-soft">
+                <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-jagGreen">
+                    <x-icon name="map" class="h-7 w-7" />
+                </div>
                 <div class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagGreen">Coordonnées</div>
                 <div class="mt-6 space-y-4 text-sm leading-7 text-jagText">
                     <p><span class="font-semibold text-jagNavy">Adresse :</span> Koudougou, Burkina Faso</p>
-                    <p><span class="font-semibold text-jagNavy">Email :</span> justagrogroup@gmail.com</p>
+                    <p><span class="font-semibold text-jagNavy">Email :</span> contact@justagrogroup.com</p>
                     <p><span class="font-semibold text-jagNavy">Téléphone :</span> +226 54 12 62 99 / +226 72 84 10 89</p>
                     <p><span class="font-semibold text-jagNavy">WhatsApp :</span> +226 78 61 21 52</p>
                 </div>
             </div>
 
             <div class="rounded-[2rem] bg-white p-8 shadow-soft">
+                <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-jagBlue/10 text-jagBlue">
+                    <x-icon name="map" class="h-7 w-7" />
+                </div>
                 <div class="text-xs font-heading font-bold uppercase tracking-[0.20em] text-jagBlue">Carte</div>
                 <div class="mt-5 flex min-h-[260px] items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-jagMuted text-center text-sm text-slate-500">
                     Zone Google Maps — Koudougou

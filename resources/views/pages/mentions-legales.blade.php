@@ -21,7 +21,7 @@
                 <p class="mt-4 text-sm leading-7 text-jagText">
                     Just Agro Group<br>
                     Koudougou, Burkina Faso<br>
-                    Email : justagrogroup@gmail.com<br>
+                    Email : contact@justagrogroup.com<br>
                     Téléphone : +226 54 12 62 99 / +226 72 84 10 89
                 </p>
             </section>

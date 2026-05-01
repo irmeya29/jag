@@ -22,6 +22,11 @@ class ContactLead extends Model
         'requested_product',
         'annual_volume',
         'message',
+        'status',
+        'approved_user_id',
+        'approved_at',
+        'archived_at',
+        'admin_notes',
     ];
 
     protected function casts(): array
@@ -30,6 +35,13 @@ class ContactLead extends Model
             'has_borehole' => 'boolean',
             'land_size_hectare' => 'decimal:2',
             'annual_volume' => 'decimal:2',
+            'approved_at' => 'datetime',
+            'archived_at' => 'datetime',
         ];
+    }
+
+    public function isArchived(): bool
+    {
+        return $this->status === 'archive';
     }
 }

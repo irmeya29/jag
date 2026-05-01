@@ -18,6 +18,10 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'phone' => ['nullable', 'string', 'max:30'],
+            'organization' => ['nullable', 'string', 'max:255'],
+            'avatar' => ['nullable', 'image', 'max:2048'],
+            'logo' => ['nullable', 'image', 'max:2048'],
             'email' => [
                 'required',
                 'string',

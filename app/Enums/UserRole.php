@@ -5,6 +5,7 @@ namespace App\Enums;
 enum UserRole: string
 {
     case ADMIN = 'admin';
+    case EDITEUR = 'editeur';
     case INVESTISSEUR = 'investisseur';
     case INDUSTRIEL = 'industriel';
 
@@ -12,6 +13,7 @@ enum UserRole: string
     {
         return match ($this) {
             self::ADMIN => 'Administrateur',
+            self::EDITEUR => 'Éditeur',
             self::INVESTISSEUR => 'Investisseur',
             self::INDUSTRIEL => 'Industriel',
         };

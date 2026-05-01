@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', config('app.name'))</title>
+    <title>@yield('title', config('app.name', 'Just Agro Group'))</title>
     <meta name="description" content="@yield('meta_description', 'Just Agro Group — production agricole contractuelle et approvisionnement industriel sécurisé.')">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,17 +26,35 @@
                     },
                     boxShadow: {
                         soft: '0 20px 40px rgba(13,33,55,0.08)',
+                        nav: '0 24px 60px rgba(13,33,55,0.12)',
                     }
                 }
             }
         }
     </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        [x-cloak] { display: none !important; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-rendering: optimizeLegibility;
+        }
+    </style>
+
+    @stack('styles')
+
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="font-body text-jagText bg-white antialiased">
+
+<body class="bg-white font-body text-jagText antialiased">
     @include('partials.navbar')
 
     <main>
@@ -44,5 +62,7 @@
     </main>
 
     @include('partials.footer')
+
+    @stack('scripts')
 </body>
 </html>

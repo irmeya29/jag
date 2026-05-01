@@ -1,30 +1,62 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config('app.name', 'Just Agro Group') }}</title>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jagGreen: '#2EAA63',
+                        jagBlue: '#1E9BD7',
+                        jagNavy: '#0D2137',
+                        jagForest: '#0A3D2E',
+                        jagOrange: '#FF6B35',
+                        jagText: '#555555',
+                        jagMuted: '#F7F8FC',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 20px 40px rgba(13,33,55,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-jagMuted font-body text-jagText antialiased">
+    <div class="flex min-h-screen flex-col items-center justify-center px-6 py-12">
+        <div class="mb-8">
+            <a href="{{ route('home') }}" class="inline-flex items-center justify-center">
+                <img
+                    src="{{ asset('assets/images/logo.png') }}"
+                    alt="Just Agro Group"
+                    class="h-24 w-auto object-contain"
+                >
+            </a>
         </div>
-    </body>
+
+        <div class="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+            {{ $slot }}
+        </div>
+    </div>
+</body>
 </html>

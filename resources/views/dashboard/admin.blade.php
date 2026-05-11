@@ -20,6 +20,20 @@
 </div>
 
 <div class="mt-8 rounded-[2rem] bg-white p-6 shadow-soft">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+            <h2 class="font-heading text-2xl font-extrabold text-jagNavy">Publication</h2>
+            <p class="mt-2 text-sm text-jagText">Raccourcis pour creer les articles, categories et realisations.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            <a href="{{ route('admin.blog.create') }}" class="rounded-full bg-jagGreen px-5 py-3 text-xs font-heading font-bold uppercase tracking-[0.16em] text-white">Nouvel article</a>
+            <a href="{{ route('admin.categories.create') }}" class="rounded-full border border-slate-200 px-5 py-3 text-xs font-heading font-bold uppercase tracking-[0.16em] text-jagNavy">Categorie</a>
+            <a href="{{ route('admin.portfolio.create') }}" class="rounded-full bg-jagBlue px-5 py-3 text-xs font-heading font-bold uppercase tracking-[0.16em] text-white">Realisation</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-8 rounded-[2rem] bg-white p-6 shadow-soft">
     <div class="flex items-center justify-between gap-4">
         <h2 class="font-heading text-2xl font-extrabold text-jagNavy">Derniers espaces clients</h2>
         <a href="{{ route('admin.access.create') }}" class="rounded-full bg-jagGreen px-5 py-3 text-xs font-heading font-bold uppercase tracking-[0.16em] text-white">Créer un accès</a>

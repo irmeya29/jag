@@ -93,6 +93,17 @@ class BlogPostController extends Controller
             'content' => ['required', 'string'],
             'cover_image' => ['nullable', 'image', 'max:3072'],
             'published_at' => ['nullable', 'date'],
+        ], [
+            'blog_category_id.required' => 'La categorie est obligatoire.',
+            'blog_category_id.exists' => 'La categorie selectionnee est invalide.',
+            'title.required' => 'Le titre est obligatoire.',
+            'title.max' => 'Le titre ne doit pas depasser 255 caracteres.',
+            'slug.unique' => 'Ce slug est deja utilise par un autre article.',
+            'excerpt.max' => 'L extrait ne doit pas depasser 500 caracteres.',
+            'content.required' => 'Le contenu de l article est obligatoire.',
+            'cover_image.image' => 'L image mise en avant doit etre un fichier image.',
+            'cover_image.max' => 'L image mise en avant ne doit pas depasser 3 Mo.',
+            'published_at.date' => 'La date de publication est invalide.',
         ]);
     }
 

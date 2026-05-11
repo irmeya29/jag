@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Admin\UserAccessController;
+use App\Http\Controllers\Admin\BlogCategoryController as AdminBlogCategoryController;
 use App\Http\Controllers\Admin\BlogPostController as AdminBlogPostController;
 use App\Http\Controllers\Admin\ContactLeadController;
 use App\Http\Controllers\Admin\PortfolioProjectController as AdminPortfolioProjectController;
@@ -48,6 +49,9 @@ Route::middleware(['auth', 'verified', 'role:admin,editeur'])->prefix('jag-gatew
     Route::resource('articles', AdminBlogPostController::class)->except('show')->parameters([
         'articles' => 'post',
     ])->names('blog');
+    Route::resource('categories', AdminBlogCategoryController::class)->except('show')->parameters([
+        'categories' => 'category',
+    ])->names('categories');
     Route::resource('realisations', AdminPortfolioProjectController::class)->except('show')->parameters([
         'realisations' => 'portfolio',
     ])->names('portfolio');

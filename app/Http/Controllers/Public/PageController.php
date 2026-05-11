@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
@@ -28,10 +29,22 @@ class PageController extends Controller
         return view('pages.process');
     }
 
-    public function portfolio(): View
+    public function portfolio(Request $request): View
     {
+        $selectedPole = $request->string('pole')->toString();
+        $selectedPole = in_array($selectedPole, ['pole_1', 'pole_2'], true) ? $selectedPole : null;
+
         return view('pages.portfolio', [
-            'projects' => Project::query()->latest()->paginate(9),
+            'projects' => Project::query()
+                ->when($selectedPole, fn ($query) => $query->where('pole', $selectedPole))
+                ->latest()
+                ->paginate(9)
+                ->withQueryString(),
+            'selectedPole' => $selectedPole,
+            'poles' => [
+                'pole_1' => 'Pole 1',
+                'pole_2' => 'Pole 2',
+            ],
         ]);
     }
 

@@ -85,6 +85,23 @@ class PortfolioProjectController extends Controller
             'status' => ['required', Rule::in(['en_cours', 'termine'])],
             'summary' => ['nullable', 'string'],
             'cover_image' => ['nullable', 'image', 'max:3072'],
+        ], [
+            'title.required' => 'Le titre est obligatoire.',
+            'title.max' => 'Le titre ne doit pas depasser 255 caracteres.',
+            'slug.unique' => 'Ce slug est deja utilise par une autre realisation.',
+            'pole.required' => 'Le pole est obligatoire.',
+            'pole.in' => 'Le pole selectionne est invalide.',
+            'culture.max' => 'La culture ou le produit ne doit pas depasser 255 caracteres.',
+            'location.required' => 'La localisation est obligatoire.',
+            'location.max' => 'La localisation ne doit pas depasser 255 caracteres.',
+            'surface_hectare.numeric' => 'La superficie doit etre un nombre.',
+            'surface_hectare.min' => 'La superficie ne peut pas etre negative.',
+            'service_type.required' => 'Le type de prestation est obligatoire.',
+            'service_type.max' => 'Le type de prestation ne doit pas depasser 255 caracteres.',
+            'status.required' => 'Le statut est obligatoire.',
+            'status.in' => 'Le statut selectionne est invalide.',
+            'cover_image.image' => 'L image mise en avant doit etre un fichier image.',
+            'cover_image.max' => 'L image mise en avant ne doit pas depasser 3 Mo.',
         ]);
     }
 

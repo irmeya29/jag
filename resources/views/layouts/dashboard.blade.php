@@ -52,9 +52,11 @@
                     <a href="{{ route('admin.access.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Accès & rôles</a>
                     <a href="{{ route('admin.leads.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Demandes</a>
                     <a href="{{ route('admin.blog.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Articles</a>
+                    <a href="{{ route('admin.categories.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Categories</a>
                     <a href="{{ route('admin.portfolio.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Réalisations</a>
                 @elseif (auth()->user()->isEditeur())
                     <a href="{{ route('admin.blog.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Articles</a>
+                    <a href="{{ route('admin.categories.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Categories</a>
                     <a href="{{ route('admin.portfolio.index') }}" class="block rounded-2xl px-4 py-3 font-semibold transition hover:bg-white/10">Réalisations</a>
                 @elseif (auth()->user()->isInvestisseur())
                     @foreach (['Mon projet', 'Rapports', 'Parcelles', 'Dépenses', 'Documents', 'Alertes', 'Just Control Live', 'Assistance'] as $item)
